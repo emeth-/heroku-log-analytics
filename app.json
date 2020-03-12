@@ -1,0 +1,20 @@
+{
+  "env": {
+    "AUTH_USER": "Make it up",
+    "AUTH_PASSWORD": "Make it up",
+  },
+  "addons": [
+    "papertrail",
+    "heroku-postgresql:hobby-dev"
+  ],
+  "success_url": "/post_install.php",
+  "scripts": {
+    "postdeploy": "php setup_pg.php"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}

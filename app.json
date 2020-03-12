@@ -1,7 +1,7 @@
 {
   "env": {
     "AUTH_USER": "Make it up",
-    "AUTH_PASSWORD": "Make it up",
+    "AUTH_PASSWORD": "Make it up"
   },
   "addons": [
     "papertrail",

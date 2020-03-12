@@ -8,6 +8,8 @@ Deploy to your own Heroku instance with this button below! After deploying, visi
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+* Note currently only tested with Apache php logs on Heroku (it works) and Gunicorn Python/Django logs on Heroku (it doesn't work)
+
 ### TODO
 - Add button to export data
 - Add button to reset data

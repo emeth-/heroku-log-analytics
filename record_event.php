@@ -1,15 +1,20 @@
 <?php
 
+error_log("sb8hit**");
 if (!isset($_SERVER['PHP_AUTH_USER'])) {
+error_log("sb8_1**");
     header('WWW-Authenticate: Basic realm="Heroku Logs"');
     header('HTTP/1.0 401 Unauthorized');
     echo 'Please login using basic auth';
     exit;
 } else {
+error_log("sb8_2**");
     if($_SERVER['PHP_AUTH_USER'] == getenv('AUTH_USER') && $_SERVER['PHP_AUTH_PW'] == getenv('AUTH_PASSWORD')) {
+    error_log("sb8_3**");
         //valid credentials!
     }
     else {
+    error_log("sb8_4**");
         print "Invalid username/password";
         die;
     }
@@ -36,8 +41,8 @@ $post_input = '10.81.230.166 - - [04/Mar/2020:05:04:05 +0000] "GET /static/walkt
 
 $results = parse_log_file($post_input);
 
-    //error_log("sb9RAW**".$post_input);
-    //error_log("sb9**".json_encode($results));
+    error_log("sb9RAW**".$post_input);
+    error_log("sb9**".json_encode($results));
 
 if($results['access_date'] && $results['browser'] && $results['browser'] != 'Crawler') {
     //error_log("sb9RAW**".$post_input);

@@ -13,3 +13,4 @@ Deploy to your own Heroku instance with this button below! After deploying, visi
 ### TODO
 - Add button to export data
 - Add button to reset data
+- Add support for nginx/gunicorn logs
